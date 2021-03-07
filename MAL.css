@@ -65,6 +65,7 @@ Display: None!important;
 }
 
 ==/UserStyle== */
+
 @-moz-document regexp(".*myanimelist\\.net/(?!animelist|mangalist).*") {
 /*-----AD AND BLOAT KILLER-----*/
   .btn-mal-service {
@@ -131,6 +132,19 @@ img[src*="images/cancel-fsg.gif"]     { background: transparent url(data:image/p
 
 #myanimelist div._unit table tbody tr {
     visibility:hidden
+}
+
+/*-- Duct Tape #154868578, because I've given up on cleaning this mess, as long as it works right? --*/
+/*-- Fixes some weird dividers--*/
+.textReadability {
+border-top: 1px solid #393939!important;
+}
+
+.navi-seasonal.fixed:after {
+background-image: none!important;
+border-top: 1px #3c9dff;
+border-top-width: 2px;
+border-top-style: outset;
 }
 
 /*-- Webkit Scrollbar --*/
